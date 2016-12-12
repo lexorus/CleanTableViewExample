@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		B1F8ABDD1DFF4DA10012C8C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F8ABDC1DFF4DA10012C8C9 /* AppDelegate.swift */; };
-		B1F8ABDF1DFF4DA10012C8C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F8ABDE1DFF4DA10012C8C9 /* ViewController.swift */; };
 		B1F8ABE21DFF4DA10012C8C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1F8ABE01DFF4DA10012C8C9 /* Main.storyboard */; };
 		B1F8ABE41DFF4DA10012C8C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1F8ABE31DFF4DA10012C8C9 /* Assets.xcassets */; };
 		B1F8ABE71DFF4DA10012C8C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1F8ABE51DFF4DA10012C8C9 /* LaunchScreen.storyboard */; };
+		B1F8ABEF1DFF51050012C8C9 /* SampleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F8ABEE1DFF51050012C8C9 /* SampleTableViewController.swift */; };
+		B1F8ABF11DFF51250012C8C9 /* LabelAndImagesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F8ABF01DFF51250012C8C9 /* LabelAndImagesCell.swift */; };
+		B1F8ABF31DFF51390012C8C9 /* ChangeColorButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F8ABF21DFF51390012C8C9 /* ChangeColorButtonCell.swift */; };
+		B1F8ABF51DFF51540012C8C9 /* ShowAlertCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F8ABF41DFF51540012C8C9 /* ShowAlertCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B1F8ABD91DFF4DA10012C8C9 /* CleanTableViewExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanTableViewExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1F8ABDC1DFF4DA10012C8C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B1F8ABDE1DFF4DA10012C8C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B1F8ABE11DFF4DA10012C8C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B1F8ABE31DFF4DA10012C8C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1F8ABE61DFF4DA10012C8C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B1F8ABE81DFF4DA10012C8C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1F8ABEE1DFF51050012C8C9 /* SampleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleTableViewController.swift; sourceTree = "<group>"; };
+		B1F8ABF01DFF51250012C8C9 /* LabelAndImagesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelAndImagesCell.swift; sourceTree = "<group>"; };
+		B1F8ABF21DFF51390012C8C9 /* ChangeColorButtonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeColorButtonCell.swift; sourceTree = "<group>"; };
+		B1F8ABF41DFF51540012C8C9 /* ShowAlertCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowAlertCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +61,11 @@
 			isa = PBXGroup;
 			children = (
 				B1F8ABDC1DFF4DA10012C8C9 /* AppDelegate.swift */,
-				B1F8ABDE1DFF4DA10012C8C9 /* ViewController.swift */,
+				B1F8ABEE1DFF51050012C8C9 /* SampleTableViewController.swift */,
 				B1F8ABE01DFF4DA10012C8C9 /* Main.storyboard */,
+				B1F8ABF01DFF51250012C8C9 /* LabelAndImagesCell.swift */,
+				B1F8ABF21DFF51390012C8C9 /* ChangeColorButtonCell.swift */,
+				B1F8ABF41DFF51540012C8C9 /* ShowAlertCell.swift */,
 				B1F8ABE31DFF4DA10012C8C9 /* Assets.xcassets */,
 				B1F8ABE51DFF4DA10012C8C9 /* LaunchScreen.storyboard */,
 				B1F8ABE81DFF4DA10012C8C9 /* Info.plist */,
@@ -137,8 +146,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1F8ABDF1DFF4DA10012C8C9 /* ViewController.swift in Sources */,
 				B1F8ABDD1DFF4DA10012C8C9 /* AppDelegate.swift in Sources */,
+				B1F8ABEF1DFF51050012C8C9 /* SampleTableViewController.swift in Sources */,
+				B1F8ABF11DFF51250012C8C9 /* LabelAndImagesCell.swift in Sources */,
+				B1F8ABF51DFF51540012C8C9 /* ShowAlertCell.swift in Sources */,
+				B1F8ABF31DFF51390012C8C9 /* ChangeColorButtonCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
