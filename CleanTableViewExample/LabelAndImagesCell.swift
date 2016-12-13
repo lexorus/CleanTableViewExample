@@ -8,10 +8,41 @@
 
 import UIKit
 
-final class LabelAndImagesCell: UITableViewCell {
+private let LabelAndImagesCellIdentifier = "LabelAndImagesCell"
+
+final class LabelAndImagesCell: UITableViewCell, Setable {
     
     @IBOutlet weak var leftImageView: UIImageView!
     @IBOutlet weak var rightImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     
+    func populate(data: CellData) {
+        guard let cellData = data as? LabelAndImagesCellData else {
+            return
+        }
+        leftImageView.image = cellData.leftImage
+        rightImageView.image = cellData.rightImage
+        titleLabel.text = cellData.title
+    }
+    
+}
+
+final class LabelAndImagesCellModel: TableViewCellDescriber {
+    var height: CGFloat = 62
+    var cellIdentifier: String = LabelAndImagesCellIdentifier
+    var cellClass: Setable.Type {
+        return LabelAndImagesCell.self
+    }
+    var data: CellData
+    
+    init<T: CellData>(withData data: T) {
+        self.data = data
+    }
+    
+}
+
+struct LabelAndImagesCellData: CellData {
+    let leftImage: UIImage
+    let rightImage: UIImage
+    let title: String
 }
