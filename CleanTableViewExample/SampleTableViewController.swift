@@ -10,12 +10,32 @@ import UIKit
 
 final class SampleTableViewController: UITableViewController {
     
-    private let tableViewBuilder = TableViewBuilder()
+    private var tableViewBuilder: TableViewBuilder!
     var tableViewCells: [TableViewCellDescriber] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableViewCells = tableViewBuilder.cellsForFirstOption()
+        tableViewBuilder =
+            TableViewBuilder(changeColorButtonAction: changeColorButtonAction,
+                             showAlertButtonAction: showAlertButtonAction)
+        tableViewCells = tableViewBuilder.composeCellsWithWhiteColorForSetableCell()
+    }
+    
+    // Cells functions
+    
+    private func changeColorButtonAction() {
+        tableViewCells = tableViewBuilder.composeCellsWithRandomColorForSetableCell()
+        tableView.reloadData()
+    }
+    
+    private func showAlertButtonAction(text: String) {
+        let alertController = UIAlertController(title: "Alert",
+                                                message: text,
+                                                preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Nice",
+                                                style: .cancel,
+                                                handler: nil))
+        self.present(alertController, animated: true, completion: nil)
     }
 
     // MARK: - Table view data source

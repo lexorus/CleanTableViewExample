@@ -7,19 +7,66 @@
 //
 
 import Foundation
+import UIKit
 
 final class TableViewBuilder {
+    let changeColorButtonAction: () -> ()
+    let showAlertButtonAction: (String) -> ()
     
-    func cellsForFirstOption() -> [TableViewCellDescriber] {
-        return []
+    init(changeColorButtonAction: @escaping (() -> ()),
+         showAlertButtonAction: @escaping ((String) -> ())) {
+        self.changeColorButtonAction = changeColorButtonAction
+        self.showAlertButtonAction = showAlertButtonAction
     }
     
-    func cellsForSecondOption() -> [TableViewCellDescriber] {
-        return []
+    //thumbs-down-sign
+    
+    func composeCellsWithWhiteColorForSetableCell() -> [TableViewCellDescriber] {
+        return composeCellsWithColorForSetableCell(color: .white)
     }
     
-    func cellsForThirdOption() -> [TableViewCellDescriber] {
-        return []
+    func composeCellsWithRandomColorForSetableCell() -> [TableViewCellDescriber] {
+        return composeCellsWithColorForSetableCell(color: UIColor.random)
     }
     
+    func composeCellsWithColorForSetableCell(color: UIColor) -> [TableViewCellDescriber] {
+        let labelAndImagesCellData =
+            LabelAndImagesCellData(leftImage: UIImage(named: "thumbs-down-sign")!,
+                                   rightImage: UIImage(named: "thumbs-up-sign")!,
+                                   title: "Some title")
+        let labelAndImagesCellModel =
+            LabelAndImagesCellModel(withData: labelAndImagesCellData)
+        
+        let changeColorButtonCellData =
+            ChangeColorButtonCellData(backgroundColor: color,
+                                      changeColorButtonAction: changeColorButtonAction)
+        let changeColorButtonCellModel =
+            ChangeColorButtonCellModel(withData: changeColorButtonCellData)
+        
+        let showAlertCellData =
+            ShowAlertCellData(showAlertButtonAction: showAlertButtonAction)
+        let showAlertCellModel =
+            ShowAlertCellModel(withData: showAlertCellData)
+        
+        
+        return [labelAndImagesCellModel,
+                changeColorButtonCellModel,
+                showAlertCellModel]
+    }
+    
+}
+
+private extension UIColor {
+    static var random: UIColor {
+        return UIColor(red:   .random(),
+                       green: .random(),
+                       blue:  .random(),
+                       alpha: 1.0)
+    }
+}
+
+private extension CGFloat {
+    static func random() -> CGFloat {
+        return CGFloat(arc4random()) / CGFloat(UInt32.max)
+    }
 }

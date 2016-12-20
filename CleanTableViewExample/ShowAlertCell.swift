@@ -20,7 +20,10 @@ final class ShowAlertCell: UITableViewCell, Setable {
     }
     
     func populate(data: CellData) {
-        
+        guard let cellData = data as? ShowAlertCellData else {
+            return
+        }
+        showAlertButtonAction = cellData.showAlertButtonAction
     }
     
 }
