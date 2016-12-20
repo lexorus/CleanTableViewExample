@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B1F4A2C31E006D9300E9AD10 /* TableViewCellDescriper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F4A2C21E006D9300E9AD10 /* TableViewCellDescriper.swift */; };
+		B1F4A2C51E008B3600E9AD10 /* TableViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F4A2C41E008B3600E9AD10 /* TableViewBuilder.swift */; };
 		B1F8ABDD1DFF4DA10012C8C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F8ABDC1DFF4DA10012C8C9 /* AppDelegate.swift */; };
 		B1F8ABE21DFF4DA10012C8C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1F8ABE01DFF4DA10012C8C9 /* Main.storyboard */; };
 		B1F8ABE41DFF4DA10012C8C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1F8ABE31DFF4DA10012C8C9 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		B1F4A2C21E006D9300E9AD10 /* TableViewCellDescriper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellDescriper.swift; sourceTree = "<group>"; };
+		B1F4A2C41E008B3600E9AD10 /* TableViewBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewBuilder.swift; sourceTree = "<group>"; };
 		B1F8ABD91DFF4DA10012C8C9 /* CleanTableViewExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanTableViewExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1F8ABDC1DFF4DA10012C8C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1F8ABE11DFF4DA10012C8C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 			children = (
 				B1F8ABDC1DFF4DA10012C8C9 /* AppDelegate.swift */,
 				B1F8ABEE1DFF51050012C8C9 /* SampleTableViewController.swift */,
+				B1F4A2C41E008B3600E9AD10 /* TableViewBuilder.swift */,
 				B1F4A2C21E006D9300E9AD10 /* TableViewCellDescriper.swift */,
 				B1F8ABE01DFF4DA10012C8C9 /* Main.storyboard */,
 				B1F8ABF01DFF51250012C8C9 /* LabelAndImagesCell.swift */,
@@ -152,6 +155,7 @@
 				B1F8ABDD1DFF4DA10012C8C9 /* AppDelegate.swift in Sources */,
 				B1F8ABEF1DFF51050012C8C9 /* SampleTableViewController.swift in Sources */,
 				B1F8ABF11DFF51250012C8C9 /* LabelAndImagesCell.swift in Sources */,
+				B1F4A2C51E008B3600E9AD10 /* TableViewBuilder.swift in Sources */,
 				B1F4A2C31E006D9300E9AD10 /* TableViewCellDescriper.swift in Sources */,
 				B1F8ABF51DFF51540012C8C9 /* ShowAlertCell.swift in Sources */,
 				B1F8ABF31DFF51390012C8C9 /* ChangeColorButtonCell.swift in Sources */,

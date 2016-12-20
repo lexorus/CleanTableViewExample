@@ -17,6 +17,7 @@ final class ChangeColorButtonCell: UITableViewCell, Setable {
         guard let cellData = data as? ChangeColorButtonCellData else {
             return
         }
+        backgroundColor = cellData.backgroundColor
         changeColorButtonAction = cellData.changeColorButtonAction
     }
     
@@ -41,5 +42,6 @@ final class ChangeColorButtonCellModel: TableViewCellDescriber {
 }
 
 struct ChangeColorButtonCellData: CellData {
+    let backgroundColor: UIColor
     let changeColorButtonAction: () -> ()
 }
