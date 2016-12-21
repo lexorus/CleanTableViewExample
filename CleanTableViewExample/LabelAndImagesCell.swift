@@ -10,7 +10,7 @@ import UIKit
 
 private let LabelAndImagesCellIdentifier = "LabelAndImagesCell"
 
-final class LabelAndImagesCell: UITableViewCell, Setable {
+final class LabelAndImagesCell: UITableViewCell, Settable {
     
     @IBOutlet weak var leftImageView: UIImageView!
     @IBOutlet weak var rightImageView: UIImageView!
@@ -30,7 +30,7 @@ final class LabelAndImagesCell: UITableViewCell, Setable {
 final class LabelAndImagesCellModel: TableCellRepresentable {
     var height: CGFloat = 62
     var identifier: String = LabelAndImagesCellIdentifier
-    var type: Setable.Type {
+    var type: Settable.Type {
         return LabelAndImagesCell.self
     }
     var data: CellData

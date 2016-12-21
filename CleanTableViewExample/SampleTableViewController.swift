@@ -18,13 +18,13 @@ final class SampleTableViewController: UITableViewController {
         tableViewBuilder =
             TableViewBuilder(changeColorButtonAction: changeColorButtonAction,
                              showAlertButtonAction: showAlertButtonAction)
-        tableViewCells = tableViewBuilder.composeCellsWithWhiteColorForSetableCell()
+        tableViewCells = tableViewBuilder.composeCellsWithWhiteColorForSettableCell()
     }
     
     // Cells functions
     
     private func changeColorButtonAction() {
-        tableViewCells = tableViewBuilder.composeCellsWithRandomColorForSetableCell()
+        tableViewCells = tableViewBuilder.composeCellsWithRandomColorForSettableCell()
         tableView.reloadData()
     }
     
@@ -55,7 +55,7 @@ final class SampleTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellModel = tableViewCells[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: cellModel.identifier, for: indexPath)
-        (cell as? Setable)?.populate(data: cellModel.data)
+        (cell as? Settable)?.populate(data: cellModel.data)
         
         return cell
     }

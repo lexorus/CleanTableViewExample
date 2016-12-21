@@ -10,7 +10,7 @@ import UIKit
 
 private let ShowAlertCellIdentifier = "ShowAlertCell"
 
-final class ShowAlertCell: UITableViewCell, Setable {
+final class ShowAlertCell: UITableViewCell, Settable {
     var showAlertButtonAction: ((String) -> ())?
     
     @IBOutlet weak var inputTextField: UITextField!
@@ -31,7 +31,7 @@ final class ShowAlertCell: UITableViewCell, Setable {
 final class ShowAlertCellModel: TableCellRepresentable {
     var height: CGFloat = 94
     var identifier = ShowAlertCellIdentifier
-    var type: Setable.Type {
+    var type: Settable.Type {
         return ShowAlertCell.self
     }
     var data: CellData

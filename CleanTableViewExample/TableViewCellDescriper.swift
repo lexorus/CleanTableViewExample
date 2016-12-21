@@ -11,12 +11,12 @@ import CoreGraphics
 protocol TableCellRepresentable {
     var height: CGFloat { get set }
     var identifier: String { get set }
-    var type: Setable.Type { get }
+    var type: Settable.Type { get }
     var data: CellData { get set }
     init<T: CellData>(withData data: T)
 }
 
-protocol Setable: class {
+protocol Settable: class {
     func populate(data: CellData)
 }
 

@@ -10,7 +10,7 @@ import UIKit
 
 private let ChangeColorButtonCellIdentifier = "ChangeColorButtonCell"
 
-final class ChangeColorButtonCell: UITableViewCell, Setable {
+final class ChangeColorButtonCell: UITableViewCell, Settable {
     var changeColorButtonAction: (() -> ())?
     
     func populate(data: CellData) {
@@ -30,7 +30,7 @@ final class ChangeColorButtonCell: UITableViewCell, Setable {
 final class ChangeColorButtonCellModel: TableCellRepresentable {
     var height: CGFloat = 76
     var identifier = ChangeColorButtonCellIdentifier
-    var type: Setable.Type {
+    var type: Settable.Type {
         return ChangeColorButtonCell.self
     }
     var data: CellData
