@@ -11,7 +11,7 @@ import UIKit
 final class SampleTableViewController: UITableViewController {
     
     private var tableViewBuilder: TableViewBuilder!
-    var tableViewCells: [TableViewCellDescriber] = []
+    var tableViewCells: [TableCellRepresentable] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,7 +54,7 @@ final class SampleTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellModel = tableViewCells[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellModel.cellIdentifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellModel.identifier, for: indexPath)
         (cell as? Setable)?.populate(data: cellModel.data)
         
         return cell

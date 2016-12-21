@@ -27,10 +27,10 @@ final class LabelAndImagesCell: UITableViewCell, Setable {
     
 }
 
-final class LabelAndImagesCellModel: TableViewCellDescriber {
+final class LabelAndImagesCellModel: TableCellRepresentable {
     var height: CGFloat = 62
-    var cellIdentifier: String = LabelAndImagesCellIdentifier
-    var cellClass: Setable.Type {
+    var identifier: String = LabelAndImagesCellIdentifier
+    var type: Setable.Type {
         return LabelAndImagesCell.self
     }
     var data: CellData

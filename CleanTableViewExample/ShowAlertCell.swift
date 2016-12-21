@@ -28,10 +28,10 @@ final class ShowAlertCell: UITableViewCell, Setable {
     
 }
 
-final class ShowAlertCellModel: TableViewCellDescriber {
+final class ShowAlertCellModel: TableCellRepresentable {
     var height: CGFloat = 94
-    var cellIdentifier = ShowAlertCellIdentifier
-    var cellClass: Setable.Type {
+    var identifier = ShowAlertCellIdentifier
+    var type: Setable.Type {
         return ShowAlertCell.self
     }
     var data: CellData

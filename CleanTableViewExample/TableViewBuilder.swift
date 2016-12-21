@@ -21,15 +21,15 @@ final class TableViewBuilder {
     
     //thumbs-down-sign
     
-    func composeCellsWithWhiteColorForSetableCell() -> [TableViewCellDescriber] {
+    func composeCellsWithWhiteColorForSetableCell() -> [TableCellRepresentable] {
         return composeCellsWithColorForSetableCell(color: .white)
     }
     
-    func composeCellsWithRandomColorForSetableCell() -> [TableViewCellDescriber] {
+    func composeCellsWithRandomColorForSetableCell() -> [TableCellRepresentable] {
         return composeCellsWithColorForSetableCell(color: UIColor.random)
     }
     
-    func composeCellsWithColorForSetableCell(color: UIColor) -> [TableViewCellDescriber] {
+    func composeCellsWithColorForSetableCell(color: UIColor) -> [TableCellRepresentable] {
         let labelAndImagesCellData =
             LabelAndImagesCellData(leftImage: UIImage(named: "thumbs-down-sign")!,
                                    rightImage: UIImage(named: "thumbs-up-sign")!,

@@ -27,10 +27,10 @@ final class ChangeColorButtonCell: UITableViewCell, Setable {
     
 }
 
-final class ChangeColorButtonCellModel: TableViewCellDescriber {
+final class ChangeColorButtonCellModel: TableCellRepresentable {
     var height: CGFloat = 76
-    var cellIdentifier = ChangeColorButtonCellIdentifier
-    var cellClass: Setable.Type {
+    var identifier = ChangeColorButtonCellIdentifier
+    var type: Setable.Type {
         return ChangeColorButtonCell.self
     }
     var data: CellData

@@ -8,10 +8,10 @@
 
 import CoreGraphics
 
-protocol TableViewCellDescriber {
+protocol TableCellRepresentable {
     var height: CGFloat { get set }
-    var cellIdentifier: String { get set }
-    var cellClass: Setable.Type { get }
+    var identifier: String { get set }
+    var type: Setable.Type { get }
     var data: CellData { get set }
     init<T: CellData>(withData data: T)
 }
