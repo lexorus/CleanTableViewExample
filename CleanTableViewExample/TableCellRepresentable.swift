@@ -1,5 +1,5 @@
 //
-//  TableViewCellDescriper.swift
+//  TableCellRepresentable.swift
 //  CleanTableViewExample
 //
 //  Created by Dmitrii Celpan on 12/13/16.
